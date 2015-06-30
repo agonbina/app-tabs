@@ -1,3 +1,13 @@
 .ui.raised.segment
 	h1.ui.header {{title}}
 	block content
+
+	.ui.horizontal.divider
+
+	.ui.right.floated.large.buttons
+		a.ui.labeled.icon.button(ng-if="state.prev" ui-sref="{{state.prev}}")
+			i.left.arrow.icon
+			| {{state.prev | capitalize}}
+		a.ui.right.labeled.icon.button(ng-if="state.next" ui-sref="{{state.next}}")
+			i.right.arrow.icon
+			| {{state.next | capitalize}}

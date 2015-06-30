@@ -15,7 +15,9 @@ export default function($stateProvider, $urlRouterProvider) {
 		'profile': {
 			url: '/profile',
 			data: {
-				title: 'Profile'
+				state: {
+					next: 'interests'
+				}
 			},
 			controller: ProfileController,
 			template: profileTpl
@@ -23,7 +25,10 @@ export default function($stateProvider, $urlRouterProvider) {
 		'interests': {
 			url: '/interests',
 			data: {
-				title: 'Interests'
+				state: {
+					prev: 'profile',
+					next: 'preferences'
+				}
 			},
 			controller: InterestsController,
 			template: interestsTpl
@@ -31,7 +36,10 @@ export default function($stateProvider, $urlRouterProvider) {
 		'preferences': {
 			url: '/preferences',
 			data: {
-				title: 'Preferences'
+				state: {
+					prev: 'interests',
+					next: 'summary'
+				}
 			},
 			controller: PreferencesController,
 			template: preferencesTpl
@@ -39,7 +47,9 @@ export default function($stateProvider, $urlRouterProvider) {
 		'summary': {
 			url: '/summary',
 			data: {
-				title: 'Summary'
+				state: {
+					prev: 'preferences'
+				}
 			},
 			controller: SummaryController,
 			template: summaryTpl
