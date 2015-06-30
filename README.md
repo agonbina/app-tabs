@@ -12,5 +12,9 @@ The source for the app is under ```/src```. Each folder has its own README which
 * ```/filters``` Obviously this contains filter definitions(in this case there is only one, the 'capitalize' filter)
 * ```/pages``` A page in this case is simply a Step. Each step has its own route as configured via ```angular-ui-router```, which in turn needs its own Controller and template. The templates are loaded via the Webpack build step, which dynamically translates each Jade template into an HTML string
 
+### Code style
+You may notice that I am not adding ```;```(semicolons), and the reason is because it is just a personal preference. Turns out they are not required(except in a few rare cases [read why](https://github.com/yyx990803/semi#but-semicolons-are-required)) but could be easily added via a build tool if every other developer in the team preferes to use them.
+I'm also using ES6 syntax, which is compiled to ES6 using [babel](https://babeljs.io/) via the Webpack build step.
+
 ### Future improvements
-* Find a better way to define dependencies(ex. for a controller) because the current setup with a Class definition for a controller will not work when the outut bundle is minified.
+* Find a better way to define dependencies(ex. for a controller) because the current setup with a Class definition for a controller will not work when the output bundle is minified.
