@@ -10,7 +10,7 @@ import summaryTpl from './templates/summary.jade'
 
 export default function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/profile')
-	
+
 	let states = {
 		'profile': {
 			url: '/profile',
@@ -19,7 +19,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					next: 'interests'
 				}
 			},
-			controller: ProfileController,
+			controller: ['$scope', '$state', ProfileController],
 			template: profileTpl
 		},
 		'interests': {
@@ -30,7 +30,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					next: 'preferences'
 				}
 			},
-			controller: InterestsController,
+			controller: ['$scope', '$state', InterestsController],
 			template: interestsTpl
 		},
 		'preferences': {
@@ -41,7 +41,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					next: 'summary'
 				}
 			},
-			controller: PreferencesController,
+			controller: ['$scope', '$state', PreferencesController],
 			template: preferencesTpl
 		},
 		'summary': {
@@ -51,7 +51,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					prev: 'preferences'
 				}
 			},
-			controller: SummaryController,
+			controller: ['$scope', '$state', SummaryController],
 			template: summaryTpl
 		}
 	}

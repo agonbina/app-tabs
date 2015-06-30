@@ -1,6 +1,8 @@
 
 export default class PageController {
 	constructor($scope, $state) {
-		$scope.state = $state.current.data.state
+		let { state={} } = $state.current.data
+
+		$scope.state = state
 	}
 }

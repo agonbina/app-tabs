@@ -4,9 +4,10 @@
 	<title>Escenic challenge</title>
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.css">
-	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/bower_components/ngstorage/ngStorage.js"></script>
 </head>
 <body>
     <main class="ui page grid">
@@ -44,6 +45,7 @@
 
 	    <!-- Display the currently active step(i.e. tab) -->
 	    <div ui-view></div>
+	    
     </main>
 
 	<script src="dist/bundle.js"></script>

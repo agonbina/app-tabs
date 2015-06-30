@@ -17,4 +17,3 @@ You may notice that I am not adding ```;```(semicolons), and the reason is becau
 I'm also using ES6 syntax, which is compiled to ES6 using [babel](https://babeljs.io/) via the Webpack build step.
 
 ### Future improvements
-* Find a better way to define dependencies(ex. for a controller) because the current setup with a Class definition for a controller will not work when the output bundle is minified.
