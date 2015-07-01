@@ -1,6 +1,6 @@
 
 import pagesConfig from '../pages'
-import capitalizeFilter from '../filters/capitalize'
+import { capitalizeFilter } from '../filters'
 import { uiCheckbox } from '../elements'
 
 let app = angular.module('app', [
