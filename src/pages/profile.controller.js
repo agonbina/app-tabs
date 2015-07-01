@@ -2,12 +2,17 @@ import PageController from './page.controller'
 
 export default class ProfileController extends PageController {
 	constructor($scope, $state, $timeout) {
-		$scope.title = "Profile"
-		super($scope, $state)
 		let { formName } = $state.current.data
+		$scope.title = "Profile"
 
-		$scope.$watch('profile', profile => {
-			console.log(profile)
-		}, true)
+		$scope.showErrors = function() {
+			let form = $scope.form
+			return form.name.$touched && form.email.$touched && form.$invalid
+		}
+
+		$timeout(()=>{
+			window.$form = $scope.form
+		})
+		super($scope, $state)
 	}
 }
