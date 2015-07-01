@@ -1,11 +1,10 @@
-.ui.fluid.stacked.segment
-	h3.ui.top.attached.header {{title}}
-	block content
+h3.ui.top.attached.header {{title}}
+block content
 
-	.ui.right.floated.large.buttons.basic.segment
-		a.ui.labeled.icon.button(ng-if="state.prev" ui-sref="{{state.prev}}")
-			i.left.arrow.icon
-			| {{state.prev | capitalize}}
-		a.ui.right.labeled.icon.button(ng-if="state.next" ui-sref="{{state.next}}")
-			i.right.arrow.icon
-			| {{state.next | capitalize}}
+.ui.right.aligned.basic.segment: .ui.large.buttons
+	a.ui.labeled.icon.button(ng-if="state.prev" ui-sref="{{state.prev}}")
+		i.left.arrow.icon
+		| {{state.prev | capitalize}}
+	a.ui.right.labeled.icon.button(ng-if="state.next" ui-sref="{{state.next}}")
+		i.right.arrow.icon
+		| {{state.next | capitalize}}

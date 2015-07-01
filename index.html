@@ -21,41 +21,45 @@
 	<script src="/bower_components/ngFx/dist/ngFx.js"></script>
 </head>
 <body>
-    <main class="ui page grid">
-    	<header class="sixteen wide column">
-	    	<div class="ui four steps">
-				<a class="step" ui-sref="profile" ui-sref-active="active">
-					<i class="user icon"></i>	
-					<div class="content">
-						<div class="title">Profile</div>
-						<div class="description">Your personal information</div>
-					</div>
-				</a>
-				<a class="step" ui-sref="interests" ui-sref-active="active">
-					<i class="heart icon"></i>	
-					<div class="content">
-						<div class="title">Interests</div>
-						<div class="description">You like cats and ...</div>
-					</div>
-				</a>
-				<a class="step" ui-sref="preferences" ui-sref-active="active">
-					<i class="thumbs up icon"></i>	
-					<div class="content">
-						<div class="title">Preferences</div>
-						<div class="description">Tell us about them</div>
-					</div>
-				</a>
-				<a class="step" ui-sref="summary" ui-sref-active="active">
-					<i class="info icon"></i>	
-					<div class="content">
-						<div class="title">Summary</div>
-					</div>
-				</a>
-			</div>
+    <main class="ui grid container">
+    	<header class="one column row">
+    		<div class="column">
+	    		<div class="ui four steps">
+					<a class="step" ui-sref="profile" ui-sref-active="active">
+						<i class="user icon"></i>	
+						<div class="content">
+							<div class="title">Profile</div>
+							<div class="description">Your personal information</div>
+						</div>
+					</a>
+					<a class="step" ui-sref="interests" ui-sref-active="active">
+						<i class="heart icon"></i>	
+						<div class="content">
+							<div class="title">Interests</div>
+							<div class="description">You like cats and ...</div>
+						</div>
+					</a>
+					<a class="step" ui-sref="preferences" ui-sref-active="active">
+						<i class="thumbs up icon"></i>	
+						<div class="content">
+							<div class="title">Preferences</div>
+							<div class="description">Tell us about them</div>
+						</div>
+					</a>
+					<a class="step" ui-sref="summary" ui-sref-active="active">
+						<i class="info icon"></i>	
+						<div class="content">
+							<div class="title">Summary</div>
+						</div>
+					</a>
+				</div>
+    		</div>
 		</header>
 
 	    <!-- Display the currently active step(i.e. tab) -->
-	    <div class="sixteen wide column" ui-view fx-animate></div>
+	    <section class="one column row">
+	    	<div class="column" ui-view fx-animate></div>
+	    </section>
 	    
     </main>
 

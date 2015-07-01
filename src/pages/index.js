@@ -11,6 +11,12 @@ import summaryTpl from './templates/summary.jade'
 export default function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/profile')
 
+	let animationSettings = {
+		enter: 'slide-in-right-fade',
+		leave: 'slide-out-left-fade',
+		ease: 'sine',
+		speed: 500
+	}
 	let states = {
 		'profile': {
 			url: '/profile',
@@ -21,12 +27,7 @@ export default function($stateProvider, $urlRouterProvider) {
 			},
 			controller: ['$scope', '$state', ProfileController],
 			template: profileTpl,
-		    animation: {
-		    	enter: 'slide-in-right-fade',
-		    	leave: 'slide-out-left-fade',
-		    	ease: 'sine',
-		    	speed: 500
-		    }
+		    animation: animationSettings
 		},
 		'interests': {
 			url: '/interests',
@@ -38,12 +39,7 @@ export default function($stateProvider, $urlRouterProvider) {
 			},
 			controller: ['$scope', '$state', InterestsController],
 			template: interestsTpl,
-		    animation: {
-		    	enter: 'slide-in-right-fade',
-		    	leave: 'slide-out-left-fade',
-		    	ease: 'sine',
-		    	speed: 500
-		    }
+		    animation: animationSettings
 		},
 		'preferences': {
 			url: '/preferences',
@@ -55,12 +51,7 @@ export default function($stateProvider, $urlRouterProvider) {
 			},
 			controller: ['$scope', '$state', PreferencesController],
 			template: preferencesTpl,
-		    animation: {
-		    	enter: 'slide-in-right-fade',
-		    	leave: 'slide-out-left-fade',
-		    	ease: 'sine',
-		    	speed: 500
-		    }
+		    animation: animationSettings
 		},
 		'summary': {
 			url: '/summary',
@@ -71,12 +62,7 @@ export default function($stateProvider, $urlRouterProvider) {
 			},
 			controller: ['$scope', '$state', SummaryController],
 			template: summaryTpl,
-		    animation: {
-		    	enter: 'slide-in-right-fade',
-		    	leave: 'slide-out-left-fade',
-		    	ease: 'sine',
-		    	speed: 500
-		    }
+		    animation: animationSettings
 		}
 	}
 
