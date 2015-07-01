@@ -1,10 +1,35 @@
 extends page
 
 block content
-	.ui.top.attached.stacked.segment.one.column.grid
-		.column: .ui.massive.input.field
-			.ui.massive.pointing.right.label Name
-			input(ng-model="name" placeholder="Ex. Agon")
-		.column: .ui.massive.input.field
-			.ui.massive.pointing.right.label E-mail
-			input(ng-model="email" placeholder="Ex. me@company.com")
+	form.ui.top.attached.form.segment(name="form")
+		h3.ui.header Name
+		.ui.massive.fluid.input.field(ng-class="{ error: form.name.$invalid }")
+			input(
+				type="text"
+				name="name" 
+				placeholder="Ex. Agon" 
+				ng-model="profile.name" 
+				ng-minlength="2" 
+				required
+			)
+
+		h3.ui.header E-mail
+		.ui.massive.fluid.input.field(ng-class="{ error: form.email.$invalid }")
+			input(
+				type="email"
+				name="email"
+				placeholder="Ex. me@company.com"
+				ng-model="profile.email" 
+				ng-minlength="5" 
+				required
+			)
+
+	.ui.bottom.attached.error.message(class="fx-fade-up" ng-if="form.$invalid")
+		i.close.icon
+		.header Oh noes ...
+		ng-messages(for="form.name.$error" multiple): ul.list
+			li(ng-message="required") Name is required
+			li(ng-message="minlength") Name must be at least 2 characters long
+
+		ng-messages(for="form.email.$error" multiple): ul.list
+			li(ng-message="required" class="fx-fade-up") E-mail is required

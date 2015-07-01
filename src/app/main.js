@@ -5,6 +5,7 @@ import { uiCheckbox } from '../elements'
 
 let app = angular.module('app', [
 	'ngAnimate',
+	'ngMessages',
 	'ngFx',
 	'ui.router', 
 	'ngStorage'

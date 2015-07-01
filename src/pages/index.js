@@ -23,9 +23,10 @@ export default function($stateProvider, $urlRouterProvider) {
 			data: {
 				state: {
 					next: 'interests'
-				}
+				},
+				formName: 'profile'
 			},
-			controller: ['$scope', '$state', ProfileController],
+			controller: ['$scope', '$state', '$timeout', ProfileController],
 			template: profileTpl,
 		    animation: animationSettings
 		},
