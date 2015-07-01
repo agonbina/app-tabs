@@ -29,12 +29,11 @@ block content
 
 	// Display input errors, if any
 	.ui.bottom.attached.large.error.message(class="fx-fade-up" ng-if="showErrors()")
-		i.close.icon(ng-click="showErrors = false")
 		.header Oh noes ...
 		ng-messages(for="form.name.$error" ng-show="form.name.$touched" multiple): ul.list
-			li(ng-message="required") Name is required
-			li(ng-message="minlength") Name must be at least 2 characters long
+			li(ng-message="required" class="fx-fade-right") Name is required
+			li(ng-message="minlength" class="fx-fade-right") Name must be at least 2 characters long
 
-		ng-messages(for="form.email.$error" ng-show="form.name.$touched" multiple): ul.list
+		ng-messages(for="form.email.$error" ng-show="form.email.$touched" multiple): ul.list
 			li(ng-message="required" class="fx-fade-right") E-mail is required
 			li(ng-message="email" class="fx-fade-right") E-mail is not valid

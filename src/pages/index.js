@@ -26,7 +26,7 @@ export default function($stateProvider, $urlRouterProvider) {
 				},
 				formName: 'profile'
 			},
-			controller: ['$scope', '$state', '$timeout', ProfileController],
+			controller: ['$scope', '$state', '$localStorage', '$timeout', ProfileController],
 			template: profileTpl,
 		    animation: animationSettings
 		},

@@ -11,6 +11,11 @@
 	<!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/semantic.min.css">
+	<style type="text/css">
+		#steps {
+			margin-top: 20px;
+		}
+	</style>
 
 	<!-- Scripts -->
 	<script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
@@ -23,7 +28,7 @@
 </head>
 <body>
     <main class="ui grid container">
-    	<header class="one column row">
+    	<header id="steps" class="one column row">
     		<div class="column">
 	    		<div class="ui four steps">
 					<a class="step" ui-sref="profile" ui-sref-active="active">
@@ -58,7 +63,7 @@
 		</header>
 
 	    <!-- Display the currently active step(i.e. tab) -->
-	    <section class="one column row">
+	    <section id="activeStep" class="one column row">
 	    	<div class="column" ui-view fx-animate></div>
 	    </section>
 	    
