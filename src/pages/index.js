@@ -50,7 +50,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					next: 'summary'
 				}
 			},
-			controller: ['$scope', '$state', PreferencesController],
+			controller: ['$scope', '$state', '$localStorage', PreferencesController],
 			template: preferencesTpl,
 		    animation: animationSettings
 		},
@@ -61,7 +61,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					prev: 'preferences'
 				}
 			},
-			controller: ['$scope', '$state', SummaryController],
+			controller: ['$scope', '$state', '$localStorage', SummaryController],
 			template: summaryTpl,
 		    animation: animationSettings
 		}

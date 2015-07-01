@@ -2,7 +2,7 @@ extends page
 
 block content
 	form.ui.top.attached.form.segment(name="form")
-		h3.ui.header Name
+		h4.ui.header Name
 		.ui.massive.fluid.input.field(
 			ng-class="{ error: form.name.$touched && form.name.$invalid }"
 		)
@@ -15,7 +15,7 @@ block content
 				required
 			)
 
-		h3.ui.header E-mail
+		h4.ui.header E-mail
 		.ui.massive.fluid.input.field(
 			ng-class="{ error: form.email.$touched && form.email.$invalid }"
 		)

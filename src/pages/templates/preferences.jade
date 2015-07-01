@@ -1,5 +1,19 @@
 extends page
 
 block content
-	.ui.top.attached.stacked.segment.one.column.grid
-		.column: ui-checkbox(ng-model="isSubscribed" label="Subscribe to weekly Newsletter?")
+	.ui.top.attached.segment.grid
+		.column
+			.ui.basic.segment
+				h4 Newsletter
+				ui-checkbox(ng-model="preferences.isSubscribed" label="Subscribe me to the Newsletter?")
+			
+			.ui.basic.segment(ng-if="preferences.isSubscribed" class="fx-fade-up")
+				h4 How often?
+				.inline.fields
+					.field: .ui.radio.checkbox
+						input(type="radio" name="frequency" ng-model="preferences.frequency" value="weekly")
+						label Weekly
+					.field: .ui.radio.checkbox
+						input(type="radio" name="frequency" ng-model="preferences.frequency" value="monthly")
+						label Monthly
+					pre {{frequency | json}}
