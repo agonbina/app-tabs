@@ -20,7 +20,13 @@ export default function($stateProvider, $urlRouterProvider) {
 				}
 			},
 			controller: ['$scope', '$state', ProfileController],
-			template: profileTpl
+			template: profileTpl,
+		    animation: {
+		    	enter: 'slide-in-right-fade',
+		    	leave: 'slide-out-left-fade',
+		    	ease: 'sine',
+		    	speed: 500
+		    }
 		},
 		'interests': {
 			url: '/interests',
@@ -31,7 +37,13 @@ export default function($stateProvider, $urlRouterProvider) {
 				}
 			},
 			controller: ['$scope', '$state', InterestsController],
-			template: interestsTpl
+			template: interestsTpl,
+		    animation: {
+		    	enter: 'slide-in-right-fade',
+		    	leave: 'slide-out-left-fade',
+		    	ease: 'sine',
+		    	speed: 500
+		    }
 		},
 		'preferences': {
 			url: '/preferences',
@@ -42,7 +54,13 @@ export default function($stateProvider, $urlRouterProvider) {
 				}
 			},
 			controller: ['$scope', '$state', PreferencesController],
-			template: preferencesTpl
+			template: preferencesTpl,
+		    animation: {
+		    	enter: 'slide-in-right-fade',
+		    	leave: 'slide-out-left-fade',
+		    	ease: 'sine',
+		    	speed: 500
+		    }
 		},
 		'summary': {
 			url: '/summary',
@@ -52,7 +70,13 @@ export default function($stateProvider, $urlRouterProvider) {
 				}
 			},
 			controller: ['$scope', '$state', SummaryController],
-			template: summaryTpl
+			template: summaryTpl,
+		    animation: {
+		    	enter: 'slide-in-right-fade',
+		    	leave: 'slide-out-left-fade',
+		    	ease: 'sine',
+		    	speed: 500
+		    }
 		}
 	}
 

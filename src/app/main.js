@@ -1,9 +1,14 @@
 
 import pagesConfig from '../pages'
 import capitalizeFilter from '../filters/capitalize'
-import uiCheckbox from '../elements/checkbox'
+import { uiCheckbox } from '../elements'
 
-let app = angular.module('app', ['ui.router', 'ngStorage'])
+let app = angular.module('app', [
+	'ngAnimate',
+	'ngFx',
+	'ui.router', 
+	'ngStorage'
+])
 
 /**
 * Mount global configurations and filters

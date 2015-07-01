@@ -1,4 +1,10 @@
 extends page
 
 block content
-	h1 Profile form
+	.ui.attached.segment.one.column.grid
+		.column: .ui.massive.input.field
+			.ui.massive.pointing.right.label Name
+			input(ng-model="name" placeholder="Ex. Agon")
+		.column: .ui.massive.input.field
+			.ui.massive.pointing.right.label E-mail
+			input(ng-model="email" placeholder="Ex. me@company.com")

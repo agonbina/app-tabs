@@ -1,18 +1,29 @@
 <!doctype html>
 <html ng-app="app">
 <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
 	<title>Escenic challenge</title>
 
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.css">
-	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="dist/semantic/semantic.min.css">
+
+	<!-- Scripts -->
+	<script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
 	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
 	<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="/bower_components/ngstorage/ngStorage.js"></script>
+	<script src="/bower_components/ngFx/dist/ngFx.js"></script>
 </head>
 <body>
     <main class="ui page grid">
     	<header class="sixteen wide column">
-	    	<div class="ui four large steps">
+	    	<div class="ui four steps">
 				<a class="step" ui-sref="profile" ui-sref-active="active">
 					<i class="user icon"></i>	
 					<div class="content">
@@ -44,7 +55,7 @@
 		</header>
 
 	    <!-- Display the currently active step(i.e. tab) -->
-	    <div ui-view></div>
+	    <div class="sixteen wide column" ui-view fx-animate></div>
 	    
     </main>
 
