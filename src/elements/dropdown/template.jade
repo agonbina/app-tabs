@@ -1,3 +1,15 @@
-.ui.checkbox
-	input(type="checkbox")
-	label
+.ui.selection.dropdown(
+		ng-mouseenter="isOpen = true"
+		ng-mouseleave="isOpen = false"
+	)
+	.default.text(ng-if="!selected.label") {{label}}
+	.text(ng-if="selected.label") {{selected.label}}
+
+	i.dropdown.icon
+
+	.menu(ng-class="{hidden: !isOpen, visible: isOpen}" class="fx-fade-down")
+		.item(
+			ng-repeat="option in options" 
+			ng-click="selectItem($index)"
+			ng-class="{'active selected': selected.value === option.value}"
+		) {{option.label}}

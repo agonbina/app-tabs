@@ -2,5 +2,6 @@ extends page
 
 block content
 	.ui.top.attached.segment.grid
-		.column
-			h1 Interests form
+		.column: .ui.basic.segment
+			ui-dropdown(ng-model="favorite" options="animalTypes" label="Pet")
+			pre {{favorite | json}}

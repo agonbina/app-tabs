@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/agonbina/app-tabs/issues"
   },
-  "homepage": "https://github.com/agonbina/app-tabs#readme"
+  "homepage": "https://github.com/agonbina/app-tabs#readme",
+  "dependencies": {
+    "core-js": "^0.9.18"
+  }
 }

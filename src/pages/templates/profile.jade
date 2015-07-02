@@ -1,7 +1,7 @@
 extends page
 
 block content
-	form.ui.top.attached.form.segment(name="form")
+	.ui.top.attached.segment: form.ui.basic.form.segment(name="form")
 		h4.ui.header Name
 		.ui.massive.fluid.input.field(
 			ng-class="{ error: form.name.$touched && form.name.$invalid }"
