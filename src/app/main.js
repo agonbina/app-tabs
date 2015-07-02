@@ -1,7 +1,8 @@
 
 import pagesConfig from '../pages'
 import { capitalizeFilter } from '../filters'
-import { uiCheckbox } from '../elements'
+import { uiCheckbox, uiDropdown } from '../elements'
+import { userCard } from '../widgets'
 
 let app = angular.module('app', [
 	'ngAnimate',
@@ -19,9 +20,11 @@ app.config(pagesConfig)
 	.filter('capitalize', () => capitalizeFilter)
 
 /**
-* Mount UI directives and controllers
+* Mount UI elements, widgets and controllers
 */
 
 app.directive('uiCheckbox', uiCheckbox)
+	.directive('uiDropdown', uiDropdown)
+	.directive('userCard', userCard)
 
 export default app

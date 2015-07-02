@@ -1,0 +1,10 @@
+.ui.centered.card
+	.content
+		.header {{ profile.name }}
+	.content(ng-if="preferences.isSubscribed")
+		p You are subscribed to our <strong>{{preferences.frequency}}</strong> newsletter
+	.content(ng-if="!preferences.isSubscribed")
+		p You are not subscribed to our newsletter
+	.extra.content
+		i.mail.outline.icon
+		| {{ profile.email }}

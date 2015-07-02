@@ -2,16 +2,7 @@ extends page
 
 block content
 	.ui.top.attached.segment.grid(ng-show="profileIsComplete()"): .column
-		.ui.centered.card
-			.content
-				.header{{ summary.profile.name }}
-			.content(ng-if="summary.preferences.isSubscribed")
-				p You are subscribed to our <strong>{{summary.preferences.frequency}}</strong> newsletter
-			.content(ng-if="!summary.preferences.isSubscribed")
-				p You are not subscribed to our newsletter
-			.extra.content
-				i.mail.outline.icon
-				| {{ summary.profile.email }}
+		user-card(profile="summary.profile" preferences="summary.preferences")
 
 	.ui.attached.success.message(ng-show="profileIsComplete()")
 		.header Profile complete
