@@ -46,8 +46,9 @@ Then:
 ### Other libraries used
 Some of the angular libraries that I used for the project:
 
-* ```angular-ui-router```[*](https://github.com/angular-ui/ui-router) used to manage the state on each step of the wizard
-* ```angular-messages```[*](https://docs.angularjs.org/api/ngMessages) used to display validation messages
-* ```ngStorage```[*](https://github.com/gsklee/ngStorage) used to store the collected data on each step to localStorage, so that we can restore it even on a full browser refresh
-* ```ngFx```[*](https://github.com/Hendrixer/ngFx) really cool library that enables adding pleasant animations
+* ```angular-ui-router```[***](https://github.com/angular-ui/ui-router) used to manage the state on each step of the wizard
+* ```angular-messages```[***](https://docs.angularjs.org/api/ngMessages) used to display validation messages
+* ```ngStorage```[***](https://github.com/gsklee/ngStorage) used to store the collected data on each step to localStorage, so that we can restore it even on a full browser refresh
+* ```ngFx```[***](https://github.com/Hendrixer/ngFx) really cool library that enables adding pleasant animations
+* ```Jade```[***](http://jade-lang.com/) for templates which are compiled to HTML strings before usage
 * ```Semantic UI``` for the UI elements and views I used the new version of [Semantic, 2.0](http://semantic-ui.com/introduction/new.html)
