@@ -5,6 +5,9 @@
 		p You are subscribed to our <strong>{{preferences.frequency}}</strong> newsletter
 	.content(ng-if="!preferences.isSubscribed")
 		p You are not subscribed to our newsletter
+	.content(ng-if="interests")
+		p Your favorite animal is <strong>{{interests.favorite}}</strong>
+		p(ng-if="interests.petName != ''") You have a pet {{interests.favorite}} named <strong>{{interests.petName}}</strong>
 	.extra.content
 		i.mail.outline.icon
 		| {{ profile.email }}

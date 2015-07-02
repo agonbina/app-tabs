@@ -2,7 +2,11 @@ extends page
 
 block content
 	.ui.top.attached.segment.grid(ng-show="profileIsComplete()"): .column
-		user-card(profile="summary.profile" preferences="summary.preferences")
+		user-card(
+			profile="summary.profile" 
+			preferences="summary.preferences" 
+			interests="summary.interests"
+		)
 
 	.ui.attached.success.message(ng-show="profileIsComplete()")
 		.header Profile complete
