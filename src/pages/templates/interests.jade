@@ -2,6 +2,11 @@ extends page
 
 block content
 	.ui.top.attached.segment.grid
-		.column: .ui.basic.segment
-			ui-dropdown(ng-model="favorite" options="animalTypes" label="Pet")
-			pre {{favorite | json}}
+		.column: .ui.basic.form.segment
+			.field
+				h4.ui.header Favorite animal
+				ui-dropdown(ng-model="interests.favorite" options="animalTypes" label="Pet")
+
+			.inline.fluid.field(ng-show="hasFavorite()" class="fx-fade-up")
+				p Enter the name of your <strong>{{interests.favorite}}</strong>
+				input(type="text" ng-model="interests.petName" placeholder="Ex. Zoi")

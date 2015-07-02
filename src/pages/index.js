@@ -38,7 +38,7 @@ export default function($stateProvider, $urlRouterProvider) {
 					next: 'preferences'
 				}
 			},
-			controller: ['$scope', '$state', InterestsController],
+			controller: ['$scope', '$state', '$localStorage', InterestsController],
 			template: interestsTpl,
 		    animation: animationSettings
 		},

@@ -10,8 +10,6 @@ export default class PreferencesController extends PageController {
 
 		super($scope, $state)
 
-		$scope.$watch('preferences', preferences => {
-			$storage.preferences = preferences
-		}, true)
+		$scope.$watch('preferences', preferences => $storage.preferences = preferences, true)
 	}
 }
