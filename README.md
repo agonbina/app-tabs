@@ -1,3 +1,6 @@
+### Demo
+You can see the app running at [escenic-challenge.bitballoon.com](http://escenic-challenge.bitballoon.com/)
+
 ### Architecture
 The theme of this wizard app is a "user registering for an account using a multistep wizard".
 It is using the ```Angular ui-router``` module to manage the state for each Step(i.e. tab) in the registration process and route. 
