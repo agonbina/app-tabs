@@ -24,6 +24,21 @@ I'm also using ES6 syntax, which is compiled to ES5 using [babel](https://babelj
 
 ### Future improvements
 
+### Contributing(ie developing locally)
+You must have [Node](https://nodejs.org/) and NPM installed in your dev environment.
+I used Bower to manage the front end dependencies(ie. Angular and the extensions) and NPM to manage the dev dependencies for Webpack.
+
+To develop and/or run the app locally, do this:
+Open a terminal and install the following npm dependencies globally:
+*Webpack* ```npm install -g webpack```
+*Bower* ```npm install -g bower```
+*http-server* ```npm install -g http-server``` or an equivalent
+
+* Clone this repository ```git clone https://github.com/agonbina/app-tabs.git```
+* cd into it ```cd app-tabs```
+* Install all the dependencies ```npm install``` and ```bower install``
+* Build the application ```webpack```
+* Finally run the http-server ```http-server --cors -o```
 
 ### Other libraries used
 Some of the angular libraries that I used for the project:
