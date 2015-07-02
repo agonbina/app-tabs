@@ -13,12 +13,13 @@ The step routes are as follows:
 
 
 ### File organization
-The source for the app is under ```/src```. Each folder has its own README which describes what it contains and the reasons as to why it has been setup the way it is.
+The source for the app is under ```/src```. Some folders have its own README which describes what it contains and the reasons why it has been setup the way it is.
 
-* ```/app``` Contains app specific logic, specifically the ```main.js``` file loads global dependencies(ex. things like filters, controllers, services) which should be available anywhere in our app
-* ```/elements``` Contains a set of directives for UI elements
-* ```/filters``` Obviously this contains filter definitions(in this case there is only one, the 'capitalize' filter)
-* ```/pages``` A page in this case is simply a Step. Each step has its own route as configured via ```angular-ui-router```, which in turn needs its own Controller and template. The templates are loaded via the Webpack build step, which dynamically translates each Jade template into an HTML string
+* ```/app``` contains app specific logic, specifically the ```main.js``` file loads global dependencies(ex. things like filters, controllers, services) which should be available anywhere in our app
+* ```/elements``` contains a set of directives for UI elements
+* ```/widgets``` contains more complex, app specific, reusable widgets(component directives)
+* ```/filters``` contains filter definitions(in this case there is only one, the 'capitalize' filter)
+* ```/pages``` a page in this case is simply a Step. Each step has its own route as configured via ```angular-ui-router```, which in turn needs its own Controller and template. The templates are loaded via the Webpack build step, which dynamically translates each Jade template into an HTML string
 
 
 ### Code style
